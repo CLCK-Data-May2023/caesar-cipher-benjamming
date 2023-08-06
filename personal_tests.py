@@ -18,12 +18,14 @@ tests = dict([
 
 for P, C in tests.items():
     if shift5(P) == C:
+        # encrypt input string
+        # test if the output of shift5 is identical to expected encrypted string
         CONDITION = True
     else:
         CONDITION = False
         break
 print(CONDITION)
-#CONDITION should be true if all the tests pass.
+#CONDITION should be true if all the tests pass
 #This test works for me. 
 
 #This code worked as expected for me. I think my code is working fine? Very confusing why I'm still getting errors on github tests.
