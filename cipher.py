@@ -31,7 +31,7 @@ def test_function():
     print(encrypted_string1 == shift5(test_string1))
 
 def assignment_function():
-    """Test a string with shift5 function.
+    """Encrypt a string with shift5 function.
     Run this code to satisfy assignment."""
     print("The encrypted sentence is: ",
           shift5(input("Please enter a sentence: ").lower()), sep='')
