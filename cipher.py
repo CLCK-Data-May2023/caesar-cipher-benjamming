@@ -31,7 +31,7 @@ def test_function():
 
 def assignment_function():
     print("The encrypted sentence is: ",
-          shift5(input("Please enter a sentence: ")), sep='')
+          shift5(input("Please enter a sentence: ").lower()), sep='')
     
 #test_function()
 assignment_function()
