@@ -1,6 +1,6 @@
 #General functions
 def make_key(alphabet:str, shift:int) -> dict:
-    """Rotate alphabet to the right by shift spaces, map alphabet letters to shfted letters"""
+    """Rotate alphabet to the right by shift spaces, map plain alphabet letters to encrypted (shifted) letters"""
     alphabet_length = len(alphabet)
     shift %= alphabet_length
     key = dict()
@@ -10,7 +10,7 @@ def make_key(alphabet:str, shift:int) -> dict:
 
 def shift_text(text:str, key:dict) -> str:
     """Shift characters in string according to the rules in key;
-    Ignores characters not in key"""
+    Ignores characters not in key and passes them through"""
     output = list()
     for character in text:
         output.append(key.get(character, character))
@@ -25,6 +25,7 @@ def shift5(text):
     return shift_text(text, shift5_key)
 
 def test_function():
+    #quick test to make sure things are working
     test_string1 = "python is fun!"
     encrypted_string1 = "udymts nx kzs!"
     print(encrypted_string1 == shift5(test_string1))
