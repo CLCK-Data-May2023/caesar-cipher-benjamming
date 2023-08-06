@@ -22,7 +22,7 @@ lowercases = 'abcdefghijklmnopqrstuvwxyz'
 shift5_key = make_key(lowercases, 5)
 def shift5(text):
     """Rotate the letters in text right by 5 letters alphabetically"""
-    return shift_text(text, shift5_key)
+    return shift_text(text.lower(), shift5_key)
 
 def test_function():
     #quick test to make sure things are working
@@ -34,7 +34,7 @@ def assignment_function():
     """Encrypt a string with shift5 function.
     Run this code to satisfy assignment."""
     print("The encrypted sentence is: ",
-          shift5(input("Please enter a sentence: ").lower()), sep='')
+          shift5(input("Please enter a sentence: ")), sep='')
     
 #test_function()
 assignment_function()
