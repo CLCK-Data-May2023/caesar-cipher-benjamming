@@ -37,5 +37,5 @@ def assignment_function():
           shift5(input("Please enter a sentence: ")), sep='')
     
 #test_function()
-#assignment_function()
+assignment_function()
     
